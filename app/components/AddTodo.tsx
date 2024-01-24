@@ -9,10 +9,13 @@ import CustomButton from "./UI/CustomButton";
 import { MdCheckCircleOutline } from "react-icons/md";
 import { useCreateTodoMutation } from "@/redux/feature/todo/todoApi";
 import { errorToast, successToast } from "./notifications/toaster";
+import CustomDate from "./UI/CustomDate";
 
 const AddTodo = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [task, setTask] = useState<string>("");
+  const [date, setDate] = useState<string>("");
+  const [desc, setDesc] = useState<string>("");
 
   // create new task
   const [createTodo, { data, isLoading, isError, isSuccess }] =
@@ -21,7 +24,13 @@ const AddTodo = () => {
   // handleClick fn
   const handleClick = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    createTodo({ text: task });
+    createTodo({
+      text: task,
+      color: "",
+      date: date,
+      desc: desc,
+      status: false,
+    });
   };
   // error and success notification
   useEffect(() => {
@@ -47,7 +56,7 @@ const AddTodo = () => {
         <Box>
           <form onSubmit={handleClick}>
             <Grid container spacing={1}>
-              <Grid item xs={12} sm={6} md={8}>
+              <Grid item xs={12} sm={6} md={6}>
                 <CustomTextInput
                   label="Task Name"
                   setValue={setTask}
@@ -55,7 +64,23 @@ const AddTodo = () => {
                   required={true}
                 />
               </Grid>
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid item xs={12} sm={6} md={6}>
+                <CustomDate
+                  label="Date"
+                  setValue={setDate}
+                  value={date}
+                  required
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <CustomTextInput
+                  label="Description"
+                  setValue={setDesc}
+                  value={desc}
+                  required={true}
+                />
+              </Grid>
+              <Grid item xs={12}>
                 <CustomButton
                   title="save"
                   type="submit"

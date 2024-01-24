@@ -2,26 +2,55 @@
   "tasks": [
     {
       "id": "fa9d",
-      "text": "hello"
-    },
-    {
-      "id": "18fa",
-      "text": "name"
+      "text": "hello",
+      "key": 1,
+      "color": "green",
+      "status": true
     },
     {
       "id": "20ac",
       "text": "fff123",
-      "key": 3
+      "key": 2,
+      "desc": "fello",
+      "date": "01-25-2024",
+      "color": "red"
     },
     {
       "id": "b222",
       "text": "dadahola",
-      "key": 4
+      "key": 4,
+      "color": "yellow"
     },
     {
       "id": "50c2",
       "text": "lol23",
+      "key": 5,
+      "color": "red"
+    },
+    {
+      "id": "b215",
+      "text": "hey",
+      "color": "red",
+      "date": "",
+      "desc": "test",
+      "status": false,
       "key": 6
+    },
+    {
+      "id": "812c",
+      "text": "delo",
+      "color": "yellow",
+      "date": "01-25-2024",
+      "desc": "mlp",
+      "status": false
+    },
+    {
+      "id": "024d",
+      "text": "l,kkmm",
+      "color": "",
+      "date": "01-25-2024",
+      "desc": "jhuihy",
+      "status": false
     }
   ]
 }

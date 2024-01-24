@@ -45,6 +45,10 @@ const todoApi = apiSlice.injectEndpoints({
             todoApi.util.updateQueryData("getAllTodos", undefined, (draft) => {
               const draftTask = draft.find((task: ITasks) => task.id == arg.id);
               draftTask.text = tasks.data.text;
+              draftTask.desc = tasks.data.desc;
+              draftTask.status = tasks.data.status;
+              draftTask.date = tasks.data.date;
+              draftTask.color = tasks.data.color;
             })
           );
         } catch (error) {}
