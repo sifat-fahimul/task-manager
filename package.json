@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start1": "npm run json-server && npm run live",
+    "start": "next start",
     "lint": "next lint",
     "live": "next start",
     "json-server": "json-server --watch data/todos.json --port 5000",
     "dev:all": "concurrently \"npm run dev\" \"npm run json-server\"",
-    "start": "concurrently \"npm run live\" \"npm run json-server\""
+    "start:all": "concurrently \"npm run live\" \"npm run json-server\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
