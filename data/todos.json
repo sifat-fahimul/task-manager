@@ -2,7 +2,7 @@
   "tasks": [
     {
       "id": "fa9d",
-      "text": "hello",
+      "text": "hello2",
       "key": 1,
       "color": "green",
       "status": true
@@ -24,8 +24,9 @@
     {
       "id": "50c2",
       "text": "lol23",
-      "key": 5,
-      "color": "red"
+      "key": 4,
+      "color": "red",
+      "status": true
     },
     {
       "id": "b215",

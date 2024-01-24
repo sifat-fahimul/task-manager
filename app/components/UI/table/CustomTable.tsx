@@ -17,6 +17,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
   return (
     <>
       <DataGrid
+        autoHeight
         rows={rows}
         columns={columns}
         loading={loading}

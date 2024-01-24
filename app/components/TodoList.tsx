@@ -35,7 +35,7 @@ const TodoList: React.FC = () => {
   const tasks = Array.isArray(data)
     ? data.map((e: any, i: number) => ({ ...e, key: i + 1 }))
     : [];
-
+  console.log(tasks);
   // handle edit fn
   const handleEdit = (row: ITasks) => {
     setTask(row.text);
@@ -244,7 +244,7 @@ const TodoList: React.FC = () => {
   ];
   return (
     <div className="h-5/6 w-100">
-      <CustomTable columns={columns} rows={tasks ?? []} loading={isLoading} />
+      <CustomTable columns={columns} rows={tasks} loading={isLoading} />
       <CustomModal title="Add New Task" open={open} setOpen={setOpen}>
         <form onSubmit={handleClick}>
           <Grid container spacing={1}>

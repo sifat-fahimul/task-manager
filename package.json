@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run json-server --watch data/todos.json --port 5000",
-    "start": "next start",
+    "build": "next build",
+    "start1": "npm run json-server && npm run live",
     "lint": "next lint",
-    "json-server": "json-server --watch data/todos.json --port 5000"
+    "live": "next start",
+    "json-server": "json-server --watch data/todos.json --port 5000",
+    "dev:all": "concurrently \"npm run dev\" \"npm run json-server\"",
+    "start": "concurrently \"npm run live\" \"npm run json-server\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
